@@ -96,7 +96,7 @@ export default function DesignSystemPage() {
 
   return (
     <main className="min-h-screen bg-[#FAFAFC] py-12 px-6 md:px-12 lg:px-20 font-sans text-neutral-900">
-      <div className="max-w-7xl mx-auto space-y-16">
+      <div className="max-w-[1440px] mx-auto space-y-16">
         {/* Header / Hero */}
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-12 border-b border-neutral-200">
           <div className="space-y-4 max-w-2xl">

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "tertiary" | "text";
-  size?: "md" | "lg";
+  size?: "md" | "lg" | "xl";
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -22,11 +22,18 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center gap-2 rounded-md font-sans font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:pointer-events-none h-[44px]";
+      "inline-flex items-center justify-center gap-2 rounded-md font-sans font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:pointer-events-none";
+
+    const heightStyles = {
+      md: "h-[44px]",
+      lg: "h-[44px]",
+      xl: "h-[56px] sm:h-[60px]",
+    };
 
     const sizeStyles = {
-      lg: "px-4 text-base", // 16px padding
-      md: "px-3 text-sm",   // 12px padding
+      xl: "px-7 text-base font-semibold rounded-md", // 28px padding
+      lg: "px-4 text-base",                          // 16px padding
+      md: "px-3 text-sm",                            // 12px padding
     };
 
     const variantStyles = {
@@ -47,6 +54,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           baseStyles,
           variantStyles[variant],
+          variant !== "text" && heightStyles[size],
           variant !== "text" && sizeStyles[size],
           className
         )}

@@ -16,6 +16,9 @@
   --color-neutral-100: #F1F5F9;
   --color-neutral-50: #FAFAFC;
 
+  --color-canvas: #fbf8f5;
+  --color-canvas-line: #f0e7e0;
+
   --font-display: var(--font-playfair), serif;
   --font-sans: var(--font-inter), sans-serif;
 
