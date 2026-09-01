@@ -10,6 +10,12 @@
 !.yarn/releases
 !.yarn/versions
 
+#Agent
+/.agents/skills
+/.claude/skills
+/agent/skills
+/design
+
 # testing
 /coverage
 
