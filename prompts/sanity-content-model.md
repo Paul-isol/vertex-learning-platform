@@ -52,8 +52,8 @@ pipeline, the agent Context document, and the `progress` document with its write
 - `components/cards/lesson-card.tsx` / `lesson-video-card.tsx` — need `moduleLabel` ("Module 5") and
   `lessonLabel` ("Lesson 5.1"), i.e. numbering derived from order, plus a formatted `timestamp`.
 - `components/cards/resource-card.tsx` — needs resource `type`, `size`, `href`.
-- `app/layout.tsx` — `ClerkProvider` wraps children; no Sanity provider present.
-- `proxy.ts` — `clerkMiddleware()`, everything public today.
+- `app/layout.tsx` — root layout with site providers; no Sanity provider present.
+- `proxy.ts` — `better-auth` session checking middleware, gates `/my-learning` and `/profile`.
 - `package.json` — `next 16.3.1`, `next-sanity 13.3.3`, `sanity 5.31.1`, `@sanity/vision 5.31.1`,
   `@sanity/image-url`, `styled-components`. Scripts: `dev`, `build`, `start`, `lint`.
 - `tsconfig.json` — `include: ["**/*.ts", ...]`, `paths: { "@/*": ["./*"] }`,
