@@ -117,10 +117,13 @@ export const LESSON_BY_SLUG_QUERY = defineQuery(`
       _id,
       title,
       "slug": slug.current,
+      coverImage,
+      level,
       modules[]{
         _key,
         title,
         summary,
+        "durationSeconds": math::sum(lessons[]->duration),
         lessons[]->{
           _id,
           title,

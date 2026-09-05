@@ -56,3 +56,24 @@ export function formatModuleNumber(index: number): string {
 export function formatLessonLabel(moduleIndex: number, lessonIndex: number): string {
   return `${moduleIndex + 1}.${lessonIndex + 1}`;
 }
+
+/**
+ * Format seconds into timestamp string like "12:45" or "1:28:00".
+ */
+export function formatTimestamp(seconds?: number | null): string {
+  if (!seconds || seconds <= 0) return "0:00";
+  const totalSeconds = Math.floor(seconds);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const remainingSeconds = totalSeconds % 60;
+
+  const paddedSeconds = remainingSeconds.toString().padStart(2, "0");
+
+  if (hours > 0) {
+    const paddedMinutes = minutes.toString().padStart(2, "0");
+    return `${hours}:${paddedMinutes}:${paddedSeconds}`;
+  }
+
+  return `${minutes}:${paddedSeconds}`;
+}
+

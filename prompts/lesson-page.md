@@ -2,7 +2,7 @@
 
 ## Goal
 
-Build the lesson route `/lessons/[slug]`, reproducing `design/vertext-lesson.png` and wired to the
+Build the lesson route `/lessons/[slug]`, reproducing `design/vertex-lesson.png` and wired to the
 seeded Sanity content, with the lesson's video playing on the page through the provider's own embed.
 Read-only: nothing on the page writes.
 
@@ -57,7 +57,7 @@ Read-only: nothing on the page writes.
 
 ## Measurements taken from the reference
 
-Sampled from `design/vertext-lesson.png` (1024×1536) and treated as 1:1 CSS px inside the frame,
+Sampled from `design/vertex-lesson.png` (1024×1536) and treated as 1:1 CSS px inside the frame,
 matching how the home and course pages were built.
 
 - Two-column body under the existing header: sidebar x≈33→310 (≈278 wide) with a 1px `canvas-line`
@@ -211,7 +211,7 @@ matching how the home and course pages were built.
 6. The footer bar links to the previous and next lessons in curriculum order, with their titles and
    durations; the first and last lessons of a course omit the respective side.
 7. An unknown slug returns the 404 page.
-8. Desktop layout matches `design/vertext-lesson.png`; the page is usable at 375px wide with no
+8. Desktop layout matches `design/vertex-lesson.png`; the page is usable at 375px wide with no
    horizontal scroll and the sidebar collapsed.
 9. `sanity.types.ts` regenerates with the extended `LESSON_BY_SLUG_QUERY_RESULT`, and the page
    compiles against it with no `any` and no hand-written result types.
@@ -244,7 +244,7 @@ From the repo root unless stated:
 
 1. `npm run dev`, then open `http://localhost:3000/courses/nextjs-app-router-in-depth` and click a
    lesson in the curriculum accordion — it lands on that lesson page.
-2. Compare against `design/vertext-lesson.png` side by side at 1440px wide.
+2. Compare against `design/vertex-lesson.png` side by side at 1440px wide.
 3. Click the play button: the YouTube embed loads in place and plays without leaving the site.
 4. Open the same lesson with `?t=120` and confirm playback starts at 2:00.
 5. Expand and collapse sidebar modules; confirm the current lesson's module starts expanded and the
