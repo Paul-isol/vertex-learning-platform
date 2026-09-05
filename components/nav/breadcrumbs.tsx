@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -29,12 +30,12 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
                   {item.label}
                 </span>
               ) : (
-                <a
+                <Link
                   href={item.href || "#"}
                   className="hover:text-neutral-900 transition-colors line-clamp-1"
                 >
                   {item.label}
-                </a>
+                </Link>
               )}
             </li>
           );
